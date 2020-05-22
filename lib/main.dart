@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:animate_do/UI/Screens/homepage.dart';
+import 'package:animatedo/UI/Screens/homepage.dart';
 
 void main() => runApp(MyApp());
 

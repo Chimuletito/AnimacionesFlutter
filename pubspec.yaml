@@ -1,4 +1,4 @@
-name: animate_do
+name: animatedo
 description: A new Flutter project.
 
 # The following defines the version and build number for your application.
@@ -23,7 +23,10 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
+  font_awesome_flutter: ^8.8.1
   animate_do: ^1.7.2
+
+
 
 
 dev_dependencies:
