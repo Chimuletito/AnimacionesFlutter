@@ -1,10 +1,8 @@
-import 'package:animatedo/UI/Screens/Secondpage.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:animate_do/animate_do.dart';
 
-class HomePage extends StatelessWidget
+class SecondPage extends StatelessWidget
  {
   @override
   Widget build(BuildContext context) 
@@ -13,7 +11,7 @@ class HomePage extends StatelessWidget
     (
       appBar: AppBar
       (
-        title: FadeIn(child: Text("Animate_ddo"),duration: Duration(milliseconds: 500),),
+        title: FadeIn(child: Text("Second Page"),duration: Duration(milliseconds: 500),),
         actions: <Widget>
         [
           IconButton
@@ -23,13 +21,12 @@ class HomePage extends StatelessWidget
           )
         ],
       ),
-      floatingActionButton: FloatingActionButton
-      (
-        onPressed: ()
-        {
-          Navigator.push(context, CupertinoPageRoute(builder: (BuildContext context) => SecondPage()));
-        },
-        child: FaIcon(FontAwesomeIcons.play),
+      floatingActionButton: ElasticInRight(delay: Duration(milliseconds: 500),
+              child: FloatingActionButton
+        (
+          onPressed: (){},
+          child: FaIcon(FontAwesomeIcons.play),
+        ),
       ),
       body: Center
       (
@@ -40,7 +37,7 @@ class HomePage extends StatelessWidget
           [
             ElasticIn(child: Icon(Icons.new_releases,color: Colors.blue,size: 40),delay: Duration(milliseconds: 1100),),
             FadeInDown(child:Text("Titulo",style: TextStyle(fontSize: 40,fontWeight: FontWeight.w200)),delay: Duration(milliseconds: 400),),
-            FadeInDown(child: Text("Pequeño titulo",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w400)),delay: Duration(milliseconds: 1000),),
+            FadeInDown(child: Text("Pequeño titulo",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w400)),delay: Duration(milliseconds: 1000)),
             FadeInLeft(child: Container(width: 220,height: 2,color: Colors.blue),delay: Duration(milliseconds: 1100),)
           ],
         ),
