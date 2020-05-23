@@ -1,4 +1,6 @@
 import 'package:animatedo/UI/Screens/Secondpage.dart';
+import 'package:animatedo/UI/Screens/navigationpage.dart';
+import "package:animatedo/UI/Screens/twitterpage.dart";
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -13,13 +15,25 @@ class HomePage extends StatelessWidget
     (
       appBar: AppBar
       (
-        title: FadeIn(child: Text("Animate_ddo"),duration: Duration(milliseconds: 500),),
+        title: FadeOut(child: Text("Animate_ddo"),duration: Duration(milliseconds: 5000),),
         actions: <Widget>
         [
           IconButton
           (
-            icon: FaIcon(FontAwesomeIcons.twitch,color: Colors.white),
-            onPressed: (){},
+            icon: FaIcon(FontAwesomeIcons.twitter,color: Colors.white),
+            onPressed: ()
+            {
+              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=> TwitterPage()));
+            },
+          ),
+          SlideInLeft
+          (
+            child: IconButton
+            (
+              icon: Icon(Icons.navigate_next),
+              onPressed:() {Navigator.push(context, CupertinoPageRoute(builder: (BuildContext context) => SecondPage()));}
+            ),
+            from: 100,
           )
         ],
       ),
@@ -27,7 +41,7 @@ class HomePage extends StatelessWidget
       (
         onPressed: ()
         {
-          Navigator.push(context, CupertinoPageRoute(builder: (BuildContext context) => SecondPage()));
+          Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => NavigatorPage()));
         },
         child: FaIcon(FontAwesomeIcons.play),
       ),

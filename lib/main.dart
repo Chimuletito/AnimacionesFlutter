@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:animatedo/UI/Screens/homepage.dart';
+import 'package:flutter/material.dart';
+import 'package:animatedo/UI/Screens/navigationpage.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget
     (
       debugShowCheckedModeBanner: false,
       title: 'Animate do',
-      home: HomePage()
+      home:HomePage()
     );
   }
 }
